@@ -8,10 +8,14 @@ import jakarta.ws.rs.FormParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 import io.quarkus.qute.Template;
 import io.quarkus.qute.TemplateInstance;
 
+import io.vertx.ext.web.RoutingContext;
+
+import java.net.URI;
 import java.util.Random;
 import java.util.UUID;
 import java.util.HashMap;
@@ -26,10 +30,13 @@ public class VirtualMachineResource {
     @Inject
     Template statusPage;
 
+    @Inject
+    RoutingContext routingContext;
+
     @GET
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance get() {
-        return orderForm.instance();
+    public Response get() {
+        return Response.ok(orderForm.instance()).build();
     }
 
     @POST
@@ -41,31 +48,24 @@ public class VirtualMachineResource {
         @FormParam("computeParam") String computeParam,
         @FormParam("osParam") String osParam) {
 
-    // Generate a random boolean to decide whether to show an error
-    boolean hasError = new Random().nextBoolean();
+        // Existing code to process the order
+        boolean hasError = new Random().nextBoolean();
 
-    // Create an instance of the data model
-    StatusPageData data = new StatusPageData();
-    data.hasError = hasError;
+        StatusPageData data = new StatusPageData();
+        data.hasError = hasError;
 
-    if (!hasError) {
-        data.ticketId = UUID.randomUUID().toString();
+        if (!hasError) {
+            data.ticketId = UUID.randomUUID().toString();
+            data.message = generateFakeStackTrace();
+            data.randomParams = generateRandomParameters();
+            data.networkParam = networkParam;
+            data.storageParam = storageParam;
+            data.computeParam = computeParam;
+            data.osParam = osParam;
+        }
 
-        // Generate fake stack trace message
-        data.message = generateFakeStackTrace();
-
-        // Generate additional random parameters
-        data.randomParams = generateRandomParameters();
-
-        // Set form parameters
-        data.networkParam = networkParam;
-        data.storageParam = storageParam;
-        data.computeParam = computeParam;
-        data.osParam = osParam;
+        return statusPage.data(data);
     }
-
-    return statusPage.data(data);
-}
 
 private String generateFakeStackTrace() {
     String[] exceptions = {
