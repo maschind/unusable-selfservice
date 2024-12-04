@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Machine Order Form</title>
+    <style>
+        /* Overly complex and confusing styles */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f0f0;
+            color: #ff00ff;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            font-size: 16px;
+            padding: 10px;
+            background-color: #ffccff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Virtual Machine Order Portal</h1>
+    <form action="/order" method="post">
+        <div class="section">
+            <label for="networkParam">Select your preferred network parameterization:</label><br>
+            <select name="networkParam" id="networkParam">
+                <option value="Subnetwork Masking Level 3">Subnetwork Masking Level 3</option>
+                <option value="Quantum Flux Routing">Quantum Flux Routing</option>
+                <option value="Hyperbolic Redundancy Protocol">Hyperbolic Redundancy Protocol</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <label for="storageParam">Choose the storage allocation algorithm:</label><br>
+            <select name="storageParam" id="storageParam">
+                <option value="Orthogonal Persistence Matrix">Orthogonal Persistence Matrix</option>
+                <option value="Transient Hypercube Storage">Transient Hypercube Storage</option>
+                <option value="Inverted Indexing Modulus">Inverted Indexing Modulus</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <label for="computeParam">Define compute convolution tier:</label><br>
+            <select name="computeParam" id="computeParam">
+            <option value="Tier Alpha-Gamma">Tier Alpha-Gamma</option>
+            <option value="Tier Delta-Epsilon">Tier Delta-Epsilon</option>
+            <option value="Tier Zeta-Theta">Tier Zeta-Theta</option>
+            <option value="Tier Iota-Kappa">Tier Iota-Kappa</option>
+            <option value="Tier Lambda-Mu">Tier Lambda-Mu</option>
+            <option value="Tier Nu-Xi">Tier Nu-Xi</option>
+            <option value="Tier Omicron-Pi">Tier Omicron-Pi</option>
+            <option value="Tier Rho-Sigma">Tier Rho-Sigma</option>
+            <option value="Tier Tau-Upsilon">Tier Tau-Upsilon</option>
+            <option value="Tier Phi-Chi">Tier Phi-Chi</option>
+            <option value="Tier Psi-Omega">Tier Psi-Omega</option>
+            <option value="Tier Epsilon-Alpha">Tier Epsilon-Alpha</option>
+            <option value="Tier Gamma-Delta">Tier Gamma-Delta</option>
+            <option value="Tier Theta-Iota">Tier Theta-Iota</option>
+            <option value="Tier Kappa-Lambda">Tier Kappa-Lambda</option>
+            <option value="Tier Mu-Nu">Tier Mu-Nu</option>
+            <option value="Tier Xi-Omicron">Tier Xi-Omicron</option>
+            <option value="Tier Pi-Rho">Tier Pi-Rho</option>
+            <option value="Tier Sigma-Tau">Tier Sigma-Tau</option>
+            <option value="Tier Upsilon-Phi">Tier Upsilon-Phi</option>
+            <option value="Tier Chi-Psi">Tier Chi-Psi</option>
+            <option value="Tier Omega-Beta">Tier Omega-Beta</option>
+            <option value="Tier Beta-Gamma">Tier Beta-Gamma</option>
+            <option value="Tier Delta-Eta">Tier Delta-Eta</option>
+            <option value="Tier Eta-Theta">Tier Eta-Theta</option>
+            <option value="Tier Iota-Kappa">Tier Iota-Kappa</option>
+            <option value="Tier Lambda-Mu">Tier Lambda-Mu</option>
+            <option value="Tier Nu-Xi">Tier Nu-Xi</option>
+            <option value="Tier Omicron-Pi">Tier Omicron-Pi</option>
+            <option value="Tier Rho-Sigma">Tier Rho-Sigma</option>
+        </select>
+
+        </div>
+
+        <div class="section">
+            <label for="osParam">Select the operating system kernel abstraction layer:</label><br>
+            <select name="osParam" id="osParam">
+                <option value="Monolithic Nano-Kernel V2.5">Monolithic Nano-Kernel V2.5</option>
+                <option value="Micro Exo-Kernel Build 1024">Micro Exo-Kernel Build 1024</option>
+                <option value="Hybrid Macro-Kernel Release Candidate">Hybrid Macro-Kernel Release Candidate</option>
+            </select>
+        </div>
+
+        <!-- Additional Checkboxes in Grid Layout -->
+        <div class="section">
+            <label>Additional Virtual Machine Options:</label><br>
+            <div class="checkbox-grid">
+                <!-- Column 1 -->
+                <div>
+                    <label><input type="checkbox" name="option1" value="Hyper-threading Synchronization"> Enable Hyper-threading Synchronization</label>
+                    <label><input type="checkbox" name="option2" value="Quantum Tunneling Support"> Quantum Tunneling Support</label>
+                    <label><input type="checkbox" name="option3" value="Adaptive Overclocking"> Adaptive Overclocking</label>
+                    <label><input type="checkbox" name="option4" value="Predictive Failure Analysis"> Predictive Failure Analysis</label>
+                    <label><input type="checkbox" name="option5" value="Biometric Access Control"> Biometric Access Control</label>
+                    <label><input type="checkbox" name="option6" value="Neural Network Integration"> Neural Network Integration</label>
+                    <label><input type="checkbox" name="option7" value="Holographic Storage Medium"> Holographic Storage Medium</label>
+                    <label><input type="checkbox" name="option8" value="Zero-Point Energy Utilization"> Zero-Point Energy Utilization</label>
+                    <label><input type="checkbox" name="option9" value="Entropic State Reduction"> Entropic State Reduction</label>
+                    <label><input type="checkbox" name="option10" value="Dark Matter Processing"> Dark Matter Processing</label>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <label><input type="checkbox" name="option11" value="Photon Emission Amplification"> Photon Emission Amplification</label>
+                    <label><input type="checkbox" name="option12" value="Gravitational Lens Simulation"> Gravitational Lens Simulation</label>
+                    <label><input type="checkbox" name="option13" value="Subatomic Particle Alignment"> Subatomic Particle Alignment</label>
+                    <label><input type="checkbox" name="option14" value="Cryogenic Sleep Mode"> Cryogenic Sleep Mode</label>
+                    <label><input type="checkbox" name="option15" value="Interstellar Network Relay"> Interstellar Network Relay</label>
+                    <label><input type="checkbox" name="option16" value="Self-Healing Protocols"> Self-Healing Protocols</label>
+                    <label><input type="checkbox" name="option17" value="Neutrino Communication Channel"> Neutrino Communication Channel</label>
+                    <label><input type="checkbox" name="option18" value="Quantum Entanglement Backup"> Quantum Entanglement Backup</label>
+                    <label><input type="checkbox" name="option19" value="Variable Geometry Cooling"> Variable Geometry Cooling</label>
+                    <label><input type="checkbox" name="option20" value="Morphogenetic Field Integration"> Morphogenetic Field Integration</label>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <label><input type="checkbox" name="option21" value="Holographic User Interface"> Holographic User Interface</label>
+                    <label><input type="checkbox" name="option22" value="Adaptive AI Learning"> Adaptive AI Learning</label>
+                    <label><input type="checkbox" name="option23" value="Ansible Communication Protocol"> Ansible Communication Protocol</label>
+                    <label><input type="checkbox" name="option24" value="Dimensional Shift Capability"> Dimensional Shift Capability</label>
+                    <label><input type="checkbox" name="option25" value="Chroniton Particle Stabilizer"> Chroniton Particle Stabilizer</label>
+                    <label><input type="checkbox" name="option26" value="Bio-neural Gel Pack Support"> Bio-neural Gel Pack Support</label>
+                    <label><input type="checkbox" name="option27" value="Transwarp Conduit Access"> Transwarp Conduit Access</label>
+                    <label><input type="checkbox" name="option28" value="Multithreaded Reality Processing"> Multithreaded Reality Processing</label>
+                    <label><input type="checkbox" name="option29" value="Psychic Firewall Implementation"> Psychic Firewall Implementation</label>
+                    <label><input type="checkbox" name="option30" value="Subspace Distortion Field"> Subspace Distortion Field</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Radio Buttons -->
+        <div class="section">
+            <label>Select Virtual Machine Enhancements:</label><br>
+            <input type="radio" name="enhancement" value="Photon Acceleration"> Photon Acceleration<br>
+            <input type="radio" name="enhancement" value="Gravity Well Stabilizer"> Gravity Well Stabilizer<br>
+            <input type="radio" name="enhancement" value="Temporal Displacement Module"> Temporal Displacement Module<br>
+            <input type="radio" name="enhancement" value="Subspace Communication Relay"> Subspace Communication Relay<br>
+            <input type="radio" name="enhancement" value="Nanite Swarm Controller"> Nanite Swarm Controller<br>
+            <input type="radio" name="enhancement" value="Pulsar Navigation System"> Pulsar Navigation System<br>
+            <input type="radio" name="enhancement" value="Quark-Gluon Plasma Cooler"> Quark-Gluon Plasma Cooler<br>
+            <input type="radio" name="enhancement" value="Antimatter Reactor Shielding"> Antimatter Reactor Shielding<br>
+            <input type="radio" name="enhancement" value="Interdimensional Gateway Access"> Interdimensional Gateway Access<br>
+            <input type="radio" name="enhancement" value="Chronometric Particle Filter"> Chronometric Particle Filter<br>
+            <input type="radio" name="enhancement" value="Psyonic Interface Adapter"> Psyonic Interface Adapter<br>
+            <input type="radio" name="enhancement" value="Plasma Conduit Optimization"> Plasma Conduit Optimization<br>
+            <input type="radio" name="enhancement" value="Biomimetic Circuitry"> Biomimetic Circuitry<br>
+            <input type="radio" name="enhancement" value="Warp Field Stabilizer"> Warp Field Stabilizer<br>
+            <input type="radio" name="enhancement" value="Transphasic Shield Array"> Transphasic Shield Array<br>
+            <input type="radio" name="enhancement" value="Harmonic Resonance Chamber"> Harmonic Resonance Chamber<br>
+            <input type="radio" name="enhancement" value="Quantum Slipstream Drive"> Quantum Slipstream Drive<br>
+            <input type="radio" name="enhancement" value="Subatomic Particle Manipulator"> Subatomic Particle Manipulator<br>
+            <input type="radio" name="enhancement" value="Zero-Gravity Module"> Zero-Gravity Module<br>
+            <input type="radio" name="enhancement" value="Multi-Phasic Shielding"> Multi-Phasic Shielding<br>
+        </div>
+
+        <input type="submit" value="Initiate Virtual Machine Instantiation Process">
+    </form>
+</body>
+</html>

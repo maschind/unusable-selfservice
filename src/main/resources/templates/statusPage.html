@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Status</title>
+    <style>
+        /* Ugly and confusing styles */
+        body {
+            font-family: 'Papyrus', fantasy, sans-serif;
+            background-color: #d3d3d3;
+            color: #3bb58c;
+        }
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px;
+        }
+        td, th {
+            border: 3px dashed #ff00ff;
+            padding: 10px;
+            text-align: left;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: underline overline wavy red;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .stacktrace {
+            background-color: #fff0f0;
+            color: #0000ff;
+            padding: 10px;
+            border: 2px dotted #ff0000;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    {#if hasError}
+        <h1 class="header">Error</h1>
+        <p>Something went wrong...</p>
+    {#else}
+        <h1 class="header">Ticket Submission Confirmation</h1>
+
+        <div class="section">
+            <p>Your ticket has been generated with the following UID:</p>
+            <p><strong>{ticketId}</strong></p>
+        </div>
+
+        <div class="section">
+            <table>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Network Parameterization</td>
+                    <td>{networkParam}</td>
+                </tr>
+                <tr>
+                    <td>Storage Allocation Algorithm</td>
+                    <td>{storageParam}</td>
+                </tr>
+                <tr>
+                    <td>Compute Convolution Tier</td>
+                    <td>{computeParam}</td>
+                </tr>
+                <tr>
+                    <td>Operating System Kernel Abstraction Layer</td>
+                    <td>{osParam}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <p>Please wait while we process your request. Below is the detailed status message:</p>
+            <pre class="stacktrace">
+            {message}
+            </pre>
+        </div>
+    {/if}
+</body>
+</html>
